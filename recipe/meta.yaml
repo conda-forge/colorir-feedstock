@@ -1,5 +1,5 @@
 {% set name = "colorir" %}
-{% set version = "2.0.5" %}
+{% set version = "2.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/colorir-{{ version }}.tar.gz
-  sha256: 00db51e2211798f5b3bd0836b1a9abfe506eb98981e1fa680eb0d4ff9b7bbf25
+  sha256: 8e51adbed16c1e1d87b0acb1575457bf014f1d35543f0d2348358633d0d268ad
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
